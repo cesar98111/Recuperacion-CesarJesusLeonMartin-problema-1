@@ -16,4 +16,13 @@ public class Queque <T> {
         return lista.remove(0);
 
     }
+
+    @Override
+    public String toString() {
+        String cadena="";
+        for (int i = 0; i < lista.size(); i++) {
+            cadena += "| "+ lista.get(i) + " |";
+        }
+        return cadena;
+    }
 }
