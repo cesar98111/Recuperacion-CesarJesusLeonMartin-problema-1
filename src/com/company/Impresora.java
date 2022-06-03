@@ -25,13 +25,32 @@ public class Impresora {
 
     public void añadirTrabajos (Documento trabajo){
 
-        cola.enqueque(trabajo);
+        if(estado){
+            cola.enqueque(trabajo);
+        }else{
+            System.out.println("apagado");
+        }
+
 
     }
     public void verListaDeTrabajos (){
 
-        System.out.println(cola);
+        if (estado){
+            System.out.println(cola);
+        }else{
+            System.out.println("apagado");
+        }
+
 
     }
+
+    public void imprimir (){
+        if (estado){
+            System.out.println(cola.dequeque());
+        }else{
+            System.out.println("apagado");
+        }
+    }
+
 
 }
